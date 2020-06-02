@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAFAFA"
+    tools:context=".ui.country.CovidCountryDetails">
+
+    <TextView
+        android:id="@+id/countryName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Morocco"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:textSize="24sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="84dp"
+            android:padding="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/total_confirmed_rounded_layout"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/LabelFontStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total confirmed"
+                android:textColor="#757575"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/totalCases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="165846"
+                android:textColor="@color/colorTotalConfirmed"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="130dp"
+            android:padding="5dp"
+            android:layout_height="84dp"
+            android:orientation="vertical"
+            android:background="@drawable/total_death_rounded_layout"
+            android:gravity="center">
+
+            <TextView
+                style="@style/LabelFontStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total deaths"
+                android:textColor="#757575"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:id="@+id/totalDeaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="165846"
+                android:fontFamily="@font/poppins"
+                android:textSize="16sp"
+                android:textColor="@color/colorTotalDeaths" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="130dp"
+        android:padding="5dp"
+        android:layout_height="84dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/total_recovered_rounded_layout"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            style="@style/LabelFontStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total recovered"
+            android:layout_marginBottom="5dp"
+            android:textColor="#757575" />
+        <TextView
+            android:id="@+id/totalRecovered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="165846"
+            android:fontFamily="@font/poppins"
+            android:textSize="16sp"
+            android:textColor="@color/colorTotalRecovered" />
+    </LinearLayout>
+    
+    <com.github.mikephil.charting.charts.BarChart
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/barChart"/>
+</LinearLayout>
